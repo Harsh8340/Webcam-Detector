@@ -15,8 +15,8 @@ def gen():
     heartbeat_times = [time.time()]*heartbeat_count
     while True:
         frame= out(cap,heartbeat_values,heartbeat_times)
-        yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-        # yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame1 + b'\r\n\r\n')
+        yield (b'--frame\r\n'  + frame + b'\r\n\r\n')
+        # yield (b'--frame\r\n'  + frame1 + b'\r\n\r\n')
 # def gen1():
 #     cap = VideoCapture(-1)
 #     while True:
